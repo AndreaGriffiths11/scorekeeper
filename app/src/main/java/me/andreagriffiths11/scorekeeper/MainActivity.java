@@ -7,10 +7,12 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-    /** tracks the score for Wales
+    /**
+     * tracks the score for Wales
      */
     int scoreWales = 0;
-    /** tracks the score for England
+    /**
+     * tracks the score for England
      */
     int scoreEngland = 0;
 
@@ -19,7 +21,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main)
-        ;}
+        ;
+    }
 
     /**
      * adds 5 points for Wales when a try is completed
@@ -28,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
         scoreWales = scoreWales + 5;
         displayForWales(scoreWales);
     }
+
     /**
      * adds 2 points for Wales when a Goal is completed
      */
@@ -35,6 +39,7 @@ public class MainActivity extends AppCompatActivity {
         scoreWales = scoreWales + 2;
         displayForWales(scoreWales);
     }
+
     /**
      * adds 3 points for Wales when a Penalty is completed
      */
@@ -42,6 +47,7 @@ public class MainActivity extends AppCompatActivity {
         scoreWales = scoreWales + 3;
         displayForWales(scoreWales);
     }
+
     /**
      * adds 1 points for Wales when a Drop Goal is completed
      */
@@ -49,6 +55,7 @@ public class MainActivity extends AppCompatActivity {
         scoreWales = scoreWales + 1;
         displayForWales(scoreWales);
     }
+
     /**
      * adds 5 points for England when a Try is completed
      */
@@ -56,6 +63,7 @@ public class MainActivity extends AppCompatActivity {
         scoreEngland = scoreEngland + 5;
         displayForEngland(scoreEngland);
     }
+
     /**
      * adds 2 points for England when a Goal is completed
      */
@@ -63,6 +71,7 @@ public class MainActivity extends AppCompatActivity {
         scoreEngland = scoreEngland + 2;
         displayForEngland(scoreEngland);
     }
+
     /**
      * adds 3 points for England when a Penalty is completed
      */
@@ -70,6 +79,7 @@ public class MainActivity extends AppCompatActivity {
         scoreEngland = scoreEngland + 3;
         displayForEngland(scoreEngland);
     }
+
     /**
      * adds 1 point for England when a Drop Goal is completed
      */
@@ -77,6 +87,7 @@ public class MainActivity extends AppCompatActivity {
         scoreEngland = scoreEngland + 1;
         displayForEngland(scoreEngland);
     }
+
     /**
      * Resets the scores for both teams to 0.
      */
@@ -86,6 +97,7 @@ public class MainActivity extends AppCompatActivity {
         displayForWales(scoreWales);
         displayForEngland(scoreEngland);
     }
+
     /**
      * Displays the given score for Wales.
      */
@@ -93,6 +105,7 @@ public class MainActivity extends AppCompatActivity {
         TextView scoreView = (TextView) findViewById(R.id.wales_score);
         scoreView.setText(String.valueOf(score));
     }
+
     /**
      * Displays the given score for Team England.
      */
@@ -101,4 +114,4 @@ public class MainActivity extends AppCompatActivity {
         scoreView.setText(String.valueOf(score));
     }
 
-    }
+}
